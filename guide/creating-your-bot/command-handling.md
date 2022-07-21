@@ -91,22 +91,22 @@ discord-bot/
 
 Create a new folder named `commands`, which is where you'll store all of your commands.
 
-We'll be using utility methods from the [`@discordjs/builders`](https://github.com/discordjs/discord.js/tree/main/packages/builders) package to build the slash command data, so open your terminal and install it.
+We'll be using utility methods from the [`discord.js`] package to build the slash command data, so open your terminal and install it.
 
 :::: code-group
 ::: code-group-item npm
 ```sh:no-line-numbers
-npm install @discordjs/builders
+npm install discord.js
 ```
 :::
 ::: code-group-item yarn
 ```sh:no-line-numbers
-yarn add @discordjs/builders
+yarn add discord.js
 ```
 :::
 ::: code-group-item pnpm
 ```sh:no-line-numbers
-pnpm add @discordjs/builders
+pnpm add discord.js
 ```
 :::
 ::::
@@ -114,7 +114,7 @@ pnpm add @discordjs/builders
 Next, create a `commands/ping.js` file for your ping command:
 
 ```js
-const { SlashCommandBuilder } = require('@discordjs/builders');
+const { SlashCommandBuilder } = require('discord.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
